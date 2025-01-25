@@ -32,7 +32,12 @@ function App() {
     e.preventDefault();
 
     localStorage.setItem('formData', JSON.stringify(formData));
-    console.log(localStorage.getItem('formData'));
+
+    
+  const savedFormData = JSON.parse(localStorage.getItem('formData'));
+  const { fullName, fatherName } = savedFormData;
+  console.log("Full Name:", fullName);
+  console.log("Father Name:", fatherName);
   };
 
   const handleReset = () => {
